@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Technical-Documentation-Page.css">
+  </head>
+  <body>
+     <nav id="navbar">
+  <header style="font-size: 47px; margin-top: 50px; margin-left: 20px; color: #006d77; line-height: 1; ">CSS flexbox</header>
+  <ul style="list-style-type: none;">
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li><a class="nav-link" href="#Justify_content">Justify content</a></li>
+    <li><a class="nav-link" href="#Align_items">Align items</a></li>
+    <li><a class="nav-link" href="#Flex_direction">Flex direction</a></li>
+    <li><a class="nav-link" href="#Order">Order</a></li>
+    <li><a class="nav-link" href="#Align_self">Align self</a></li>
+    <li><a class="nav-link" href="#Flex_wrap"> Flex wrap</a></li>
+    <li><a class="nav-link" href="#Align_content">Align content</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+    
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+         <p> Flexbox is a powerful, well-supported layout method that was introduced with the latest version of CSS, CSS3. With flexbox, it's easy to center elements on the page and create dynamic user interfaces that shrink and expand automatically. Here  you'll find the fundamentals of flexbox. </p>
+        </article>
+      </section>
+      
+      <section class="main-section" id="Justify_content">
+        <header>Justify content</header>
+          <article>
+          <p>This CSS property aligns items horizontally and accepts the following values:</p>
+          <ul>
+            <li><strong>Flex-start</strong>: Items align to the left side of the container. </li>
+            <li><strong>Flex-end</strong>: Items align to the right side of the container. </li>
+            <li><strong>Center</strong>: Items align at the center of the container.</li>
+            <li><strong>Space-between</strong>: Items display with equal spacing between them.</li>
+            <li><strong>Space-around</strong>: Items display with equal spacing around them.</li>
+          </ul>
+            <p> For example, this code will move the element to the right: </p>
+            <code> #pond { display: flex; justify-content: flex-end; } </code> 
+          </article>
+      </section>
+      
+      <section class="main-section" id="Align_items">
+        <header>Align items</header>
+        <article>
+        <p>This CSS property aligns items vertically and accepts the following values:</p>
+          <ul>
+            <li><strong>Flex-start</strong>:  Items align to the top of the container. </li>
+            <li><strong>Flex-end</strong>: Items align to the bottom of the container. </li>
+            <li><strong>Center</strong>:  Items align at the vertical center of the container</li>
+            <li><strong>Baseline</strong>:Items display at the baseline of the container.</li>
+            <li><strong>Stretch</strong>: Items are stretched to fit the container.</li>
+          </ul>
+           <p> For example: </p>
+            <code> #pond { display: flex; align-items: flex-end; } </code> 
+        </article>
+      </section>
+      
+      <section class="main-section" id="Flex_direction">
+        <header>Flex direction</header>
+        <article>
+          <p>This CSS property defines the direction items are placed in the container and accepts the following values:</p>
+           <ul>
+            <li><strong>Row</strong>: Items are placed the same as the text direction.</li>
+            <li><strong>Row-reverse</strong>: Items are placed opposite to the text direction.</li>
+            <li><strong>Column</strong>:  Items are placed top to bottom.</li>
+             <li><strong>Column-reverse</strong>: Items are placed bottom to top.</li> </ul>
+             </article>
+         <p> For example: </p>
+            <code> #pond { display: flex; flex-direction: row-reverse; } </code> 
+      </section>
+      
+      <section class="main-section" id="Order">
+        <header>Order</header>
+        <article>
+         <p> Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the order property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).</p>
+        </article>
+      </section>
+      
+        <section class="main-section" id="Align_self">
+        <header>Align self</header>
+          <article>
+          <p>Another property you can apply to individual items is <strong>align-self</strong>. This property accepts the same values as align-items and its value for the specific item.</p>
+          </article>
+        </header>
+      </section>
+      
+       <section class="main-section" id="Flex_wrap">
+        <header>Flex wrap</header> 
+         <article>
+         <p>This CSS property specifies whether flex items are forced on a single line or can be wrapped on multiple lines and accepts the following values: </p>
+           <ul>
+            <li><strong>Nowrap</strong>: Every item is fit to a single line.</li>
+             <li><strong>Wrap</strong>: Items wrap around to additional lines.</li>
+             <li><strong>Wrap-reverse</strong>: Items wrap around to additional lines in reverse.</li> </ul>
+         </article>
+         <p> For example: </p>
+            <code> #pond { display: flex; flex-wrap: wrap; } </code> 
+      </section>
+      
+      <section class="main-section" id="Align_content">
+        <header>Align content</header> 
+        <article>
+        <p>This CSS property specifies whether flex items are forced on a single line or can be wrapped on multiple lines and accepts the following values:</p>
+           <ul>
+            <li><strong>Flex-start</strong>: Lines are packed at the top of the container. </li>
+            <li><strong>Flex-end</strong>: Lines are packed at the bottom of the container. </li>
+            <li><strong>Center</strong>:   Lines are packed at the vertical center of the container.</li>
+            <li><strong>Space-between</strong>: Lines display with equal spacing between them.</li>
+            <li><strong>Space-around</strong>: Lines display with equal spacing around them.</li>
+             <li><strong>Stretch</strong>: Lines are stretched to fit the container.</li>
+          </ul>
+        </article>
+        <p> This can be confusing, but align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect. </p>
+         <p> For example: </p>
+            <code> #pond { display: flex; flex-wrap: wrap; align-content: flex-start; } </code> 
+      </section>
+      
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+         <p> All the documentation in this page is taken from <a href="https://flexboxfroggy.com/">Flexbox Froggy</a>.</p>
+        </article>
+      </section>
+    </main>
+    </body>
+</html>
